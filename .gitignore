@@ -276,3 +276,7 @@ pip-selfcheck.json
 
 
 # End of https://www.gitignore.io/api/python,django,virtualenv,pycharm+all
+
+
+# network
+*.sock

@@ -24,9 +24,9 @@ plus simple JSON endpoint '/sample1'
 
 ## Included pakcage
 
-- Django 2.1.2
-- numpy 1.15.3
-- scipy 1.1.0
-- matplotlib 3.0.1
-
+- Django==2.1.2
+- numpy==1.15.3
+- scipy==1.1.0
+- matplotlib==3.0.1
+- uWSGI==2.0.17.1
 

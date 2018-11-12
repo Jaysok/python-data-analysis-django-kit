@@ -2,9 +2,12 @@ cycler==0.10.0
 Django==2.1.2
 kiwisolver==1.0.1
 matplotlib==3.0.1
+mysql-connector-python==8.0.13
 numpy==1.15.3
+protobuf==3.6.1
 pyparsing==2.2.2
 python-dateutil==2.7.5
 pytz==2018.6
 scipy==1.1.0
 six==1.11.0
+uWSGI==2.0.17.1

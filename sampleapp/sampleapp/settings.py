@@ -25,7 +25,9 @@ SECRET_KEY = '916784)*eftd3vsv3#2%xk&u#0&-fk=-ywuhj+rz7vr(mb4vj&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+]
 
 
 # Application definition
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sample1',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +78,12 @@ WSGI_APPLICATION = 'sampleapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'wise',
+        'USER': 'wise',
+        'PASSWORD': 'wise$$votus',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
