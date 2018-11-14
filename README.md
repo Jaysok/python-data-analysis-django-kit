@@ -6,10 +6,11 @@ Really Simple starter kit to kick off a small project.
 
 You can simply start any project by...
 
-0. (make your own virtualenv)
-1. `pip install -r requirements.txt`
+0. git clone <thisRepo> <your_directory>
+1. virtualenv --python=<python3path> <your_directory>
 2. `source bin/activate` to enable virtualenv
-3. `python manage.py runserver` to start django
+3. `pip install -r requirements.txt`
+4. `python manage.py runserver` to start django
 
 ## What have done
 
@@ -36,6 +37,8 @@ urlpatterns = [
 ### Local WSGI
 
 - uwsgi
+
+From the project directory (not `sampleapp/` !!!)
 
 ```
 $ uwsgi --ini mysite.ini
@@ -65,8 +68,6 @@ $ docker run -d -p <hostport>:<containerport> <image>:<tag>
 
 3. After then, try request to `localhost:<hostport>`
 
-
-- gitignore for PyCharm, Django, Virtualenv
 
 ## Included package
 
