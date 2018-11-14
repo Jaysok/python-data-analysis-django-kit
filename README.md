@@ -16,19 +16,7 @@ You can simply start any project by...
 - sample1 app
 
 ```
-$> django-admin startapp sample1
-```
-
-- uwsgi
-
-```
-$> uwsgi --ini mysite.ini
-```
-
-- nginx
-
-```
-$> sudo ln -s /path/to/your/mysite/mysite_nginx.conf /etc/nginx/sites-enabled/
+$ django-admin startapp sample1
 ```
 
 - plus simple JSON endpoint `/sample1`
@@ -44,6 +32,39 @@ urlpatterns = [
     path('foo/list', views.getFooList, name="foo_list") # simple end point with Foo instance list
 ]
 ```
+
+### Local WSGI
+
+- uwsgi
+
+```
+$ uwsgi --ini mysite.ini
+```
+
+- nginx
+
+```
+$ sudo ln -s /path/to/your/mysite/mysite_nginx.conf /etc/nginx/sites-enabled/
+```
+
+### Dockerized WSGI
+
+Docker image is built on top of [`tiangolo/uwsgi-nginx:python3.5`](https://hub.docker.com/r/tiangolo/uwsgi-nginx/).
+
+Simply build and run a docker image from `Dockerfile`.
+
+1. Building a docker image.
+```
+$ docker build -t <image>:<tag> . 
+```
+
+2. Run the image.
+```
+$ docker run -d -p <hostport>:<containerport> <image>:<tag>
+```
+
+3. After then, try request to `localhost:<hostport>`
+
 
 - gitignore for PyCharm, Django, Virtualenv
 
