@@ -78,12 +78,7 @@ WSGI_APPLICATION = 'sampleapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'wise',
-        'USER': 'wise',
-        'PASSWORD': 'wise$$votus',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        # ADD YOUR DATABASE SETTINGS
     }
 }
 
